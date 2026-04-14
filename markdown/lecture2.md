@@ -62,6 +62,7 @@ The Implementation Gap:
 * The "Engineering" Solution: Most modern frameworks use border-box to make the math predictable.
 
 ✅ Standard Fix for Predictability:
+
         .box {
           box-sizing: border-box; /* Width is now exactly 200px, including padding/border */
         }
