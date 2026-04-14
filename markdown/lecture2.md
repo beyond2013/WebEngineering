@@ -50,21 +50,21 @@ Standards enforce the decoupling of Structure (HTML) from Presentation (CSS).
 ### ⚠️ Example 2: The Box Model & Predictability
 Standards eliminate ambiguity in how browsers calculate space.
 
-CSS Snippet:
-    .box {
-      width: 200px;
-      padding: 20px;
-      border: 5px solid black;
-    }
+    CSS Snippet:
+        .box {
+          width: 200px;
+          padding: 20px;
+          border: 5px solid black;
+        }
 
 The Implementation Gap:
 * Standard (Content-Box): Total width = 200 + 20(L) + 20(R) + 5(L) + 5(R) = 250px.
 * The "Engineering" Solution: Most modern frameworks use border-box to make the math predictable.
 
 ✅ Standard Fix for Predictability:
-    .box {
-      box-sizing: border-box; /* Width is now exactly 200px, including padding/border */
-    }
+        .box {
+          box-sizing: border-box; /* Width is now exactly 200px, including padding/border */
+        }
 
 ---
 
@@ -72,11 +72,13 @@ The Implementation Gap:
 Not all APIs are created equal. Some "standard" ways are faster and safer.
 
 Problematic Code:
-    const element = document.getElementById("status");
-    element.innerText = "Processing..."; // Triggers Layout Reflow
+
+        const element = document.getElementById("status");
+        element.innerText = "Processing..."; // Triggers Layout Reflow
 
 Standard/Optimized Approach:
-    element.textContent = "Processing..."; // No Reflow; Faster & XSS-Safe
+
+        element.textContent = "Processing..."; // No Reflow; Faster & XSS-Safe
 
 👉 Engineering Insight: innerText is "CSS-aware" and forces the browser to calculate layout. textContent simply manipulates the raw text node, making it more efficient for high-frequency updates.
 
@@ -97,11 +99,11 @@ Solution: Always consult CanIUse.com before deploying new CSS/JS features.
 Don't guess—test. Modern engineering relies on checking for capabilities rather than checking "User Agent" strings.
 
     // ✅ Correct Engineering Approach
-    if ('geolocation' in navigator) {
-      navigator.geolocation.getCurrentPosition(success, error);
-    } else {
-      console.warn("Standard Geolocation API not supported in this browser.");
-    }
+        if ('geolocation' in navigator) {
+          navigator.geolocation.getCurrentPosition(success, error);
+        } else {
+          console.warn("Standard Geolocation API not supported in this browser.");
+        }
 
 ---
 
