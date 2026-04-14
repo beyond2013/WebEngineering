@@ -1,3 +1,9 @@
+# 🛠️ Instructor’s Note on AI & Ethics
+> **Declaration:** Portions of this material were generated with the assistance of AI (ChatGPT, OpenAI) and curated by the instructor.  
+> Students are advised to consult standard references to validate and deepen their understanding.
+
+---
+
 # Web Engineering – Lecture 1
 ## Introduction to Web Engineering
 
