@@ -29,19 +29,23 @@ Web standards are formal specifications that define how web technologies (HTML, 
 Standards enforce the decoupling of Structure (HTML) from Presentation (CSS).
 
 ❌ Non-Standard / Deprecated (Structure & Style Mixed)
+ ```html
     <center>
       <font color="red" face="Arial">Welcome to the Portal</font>
     </center>
-
+ ```
 ✅ Standard-Compliant (Decoupled)
+   ```html
     <p class="welcome-heading">Welcome to the Portal</p>
-
+   ```
+   ```css
     /* CSS: Presentation Logic */
     .welcome-heading {
       text-align: center;
       color: #d32f2f;
       font-family: Arial, sans-serif;
     }
+   ```
 
 👉 Engineering Insight: Using classes over inline tags improves Maintainability and reduces Specificity conflicts in large-scale projects.
 
@@ -53,8 +57,6 @@ In Web Engineering, we must account for the **Implementation Gap**—the differe
 
 #### **1. The Standard Model (W3C CSS Box Model)**
 By default, every HTML element is treated as a nested rectangular box. In the **Standard Model** (`content-box`), the `width` property only applies to the innermost layer.
-
-
 
 **The Layers Explained:**
 * **Content:** The core area where text, images, or child elements reside.
@@ -101,7 +103,7 @@ Problematic Code:
 
 Standard/Optimized Approach:
 
-        element.textContent = "Processing..."; // No Reflow; Faster & XSS-Safe
+        element.textContent = "Processing..."; // No Reflow; Faster & XSS(Cross Site Scripting)-Safe
 
 👉 Engineering Insight: innerText is "CSS-aware" and forces the browser to calculate layout. textContent simply manipulates the raw text node, making it more efficient for high-frequency updates.
 
@@ -119,7 +121,7 @@ Solution: Always consult CanIUse.com before deploying new CSS/JS features.
 ---
 
 ### 🛠️ Handling Inconsistencies: Feature Detection
-Don't guess—test. Modern engineering relies on checking for capabilities rather than checking "User Agent" strings.
+Don't guess—test. Modern engineering relies on checking for capabilities rather than checking "User Agent" strings(A user agent string is a string of text that the browser sends to the server with every request which acts as a ID card, telling the server which browser, version and operating system the user is running).
 
     // ✅ Correct Engineering Approach
         if ('geolocation' in navigator) {
@@ -134,11 +136,19 @@ Don't guess—test. Modern engineering relies on checking for capabilities rathe
 Standards aren't just for browsers; they are for Assistive Technologies (Screen Readers).
 
 ❌ Bad Standard (Visual only):
-    <div class="btn" onclick="submit()">Submit</div>
-    (Issue: Not focusable via keyboard; screen readers won't identify it as a button.)
+
+ ```html
+   <div class="btn" onclick="submit()">Submit</div>
+ ```
+    
+(Issue: Not focusable via keyboard; screen readers won't identify it as a button.)
 
 ✅ Good Standard (Semantic):
-    <button type="submit">Submit</button>
+
+```html
+  <button type="submit">Submit</button>
+```
+    
     (Benefit: Inherits "Focus" states and accessibility roles automatically.)
 
 ---
