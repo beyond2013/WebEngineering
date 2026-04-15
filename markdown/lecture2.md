@@ -20,7 +20,7 @@ Web standards are formal specifications that define how web technologies (HTML, 
 > Engineering Insight: Standards move the web from "it works on my machine" to "it works on the user's platform."
 
 #### Key Standardization Bodies:
-* W3C (World Wide Web Consortium): Focuses on CSS, Accessibility (WAI), and architecture.
+* W3C (World Wide Web Consortium): Focuses on CSS, Accessibility (Web Accessibility Initiative), and architecture.
 * WHATWG (Web Hypertext Application Technology Working Group): Maintains the HTML Living Standard. Modern HTML is no longer versioned (like HTML5/6) but is a continuous evolution.
 
 ---
@@ -48,25 +48,47 @@ Standards enforce the decoupling of Structure (HTML) from Presentation (CSS).
 ---
 
 ### ⚠️ Example 2: The Box Model & Predictability
-Standards eliminate ambiguity in how browsers calculate space.
 
-    CSS Snippet:
-        .box {
-          width: 200px;
-          padding: 20px;
-          border: 5px solid black;
-        }
+In Web Engineering, we must account for the **Implementation Gap**—the difference between the code we write and how the browser actually renders it.
 
-The Implementation Gap:
-* Standard (Content-Box): Total width = 200 + 20(L) + 20(R) + 5(L) + 5(R) = 250px.
-* The "Engineering" Solution: Most modern frameworks use border-box to make the math predictable.
+#### **1. The Standard Model (W3C CSS Box Model)**
+By default, every HTML element is treated as a nested rectangular box. In the **Standard Model** (`content-box`), the `width` property only applies to the innermost layer.
 
-✅ Standard Fix for Predictability:
 
-        .box {
-          box-sizing: border-box; /* Width is now exactly 200px, including padding/border */
-        }
 
+**The Layers Explained:**
+* **Content:** The core area where text, images, or child elements reside.
+* **Padding:** Clear space **inside** the box (between content and border).
+* **Border:** The structural line wrapping around the padding and content.
+* **Margin:** Invisible space **outside** the box used to separate it from neighbors.
+
+#### **2. The Calculation Breakdown**
+If you define a box with `width: 200px`, `padding: 20px`, and `border: 5px`, the browser calculates the **Actual Footprint** as follows:
+
+| Layer | Calculation | Result |
+| :--- | :--- | :--- |
+| **Declared Width** | Base Content Area | 200px |
+| **Padding** | 20px (Left) + 20px (Right) | + 40px |
+| **Border** | 5px (Left) + 5px (Right) | + 10px |
+| **Total Rendered Width** | **Sum of all layers** | **250px** |
+
+> **The Problem:** If you intended for the box to take up exactly 200px of screen space, your design is now "broken" by 50px.
+
+---
+
+#### **3. The "Engineering" Solution: `border-box`**
+To make layout math predictable, modern engineers use the **Border-Box** model. This forces the padding and border to grow **inward**, keeping the total width exactly what you specified.
+
+
+
+**✅ Standard Fix for Predictable Layouts:**
+
+```css
+.box {
+  box-sizing: border-box; 
+  /* Total width remains 200px. Browser shrinks content to fit padding/border. */
+}
+```
 ---
 
 ### ⚠️ Example 3: Performance & Security (JavaScript)
