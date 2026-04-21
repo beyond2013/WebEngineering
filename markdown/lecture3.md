@@ -3,7 +3,18 @@
 > Students are advised to consult standard references to validate and deepen their understanding.
 
 ---
+
 # Lecture 3: Introduction to HTML & Page Structure
+
+---
+
+## Recap of Previous Lecture
+
+- Difference between Internet (infrastructure) and Web (service on top of it)
+- Basic client–server model (Client → Request → Server → Response)
+- Difference between static and dynamic content
+- Real-world analogy (e.g., ready-made vs custom-made service)
+- Role of web browsers and web servers
 
 ---
 
