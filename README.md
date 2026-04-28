@@ -34,7 +34,7 @@
 
 ---
 
-### **Week 4: Advanced HTML**
+### [Week 4: Advanced HTML](markdown/lecture4.md)
 
 * Lists, tables, forms
 * Semantic HTML (header, footer, section, article)
