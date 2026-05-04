@@ -44,7 +44,7 @@
 
 ---
 
-### **Week 5: CSS Basics**
+### [Week 5: CSS Basics](markdown/lecture5.md)
 
 * Inline, internal, external CSS
 * Selectors, colors, fonts
