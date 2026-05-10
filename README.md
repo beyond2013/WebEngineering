@@ -54,7 +54,7 @@
 
 ---
 
-### **Week 6: CSS Layouts**
+### [Week 6: CSS Layouts](markdown/lecture6.md)
 
 * Flexbox
 * Grid
