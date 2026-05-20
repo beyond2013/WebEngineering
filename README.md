@@ -65,7 +65,7 @@
 
 ---
 
-### **Week 7: JavaScript Basics**
+### [Week 7: JavaScript Basics](markdown/lecture7.md)
 
 * Role of JavaScript in web
 * Variables, data types, operators
