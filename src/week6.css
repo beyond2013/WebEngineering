@@ -1,0 +1,149 @@
+        /* =========================
+           BASIC RESET
+        ========================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            line-height: 1.6;
+            padding: 10px;
+        }
+
+        /* =========================
+           MAIN PAGE CONTAINER
+        ========================== */
+        .container {
+            border: 3px solid black;
+
+            /* Try changing these */
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            min-height: 100vh;
+        }
+
+        /* =========================
+           COMMON STYLING
+        ========================== */
+        header,
+        nav,
+        main,
+        aside,
+        section,
+        article,
+        footer {
+            border: 2px solid #333;
+            padding: 15px;
+            background: white;
+        }
+
+        header {
+            background: #d9edf7;
+        }
+
+        nav {
+            background: #fcf8e3;
+        }
+
+        main {
+            background: #dff0d8;
+
+            /* Try different layouts here */
+            display: flex;
+            gap: 10px;
+        }
+
+        .content {
+            flex: 3;
+            border: 2px dashed green;
+            padding: 10px;
+        }
+
+        aside {
+            flex: 1;
+            background: #f2dede;
+        }
+
+        section {
+            margin-bottom: 10px;
+        }
+
+        article {
+            background: #fafafa;
+            margin-top: 10px;
+        }
+
+        footer {
+            background: #ddd;
+            text-align: center;
+        }
+
+        /* =========================
+           EXTRA ELEMENTS
+        ========================== */
+        .box-container {
+            border: 2px dashed blue;
+            padding: 10px;
+
+            /* Experiment here */
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 120px;
+            height: 120px;
+            border: 2px solid black;
+            background: lightblue;
+            padding: 10px;
+
+            /* Try changing position values */
+            position: relative;
+        }
+
+        .badge {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+
+            background: red;
+            color: white;
+            padding: 2px 6px;
+            font-size: 12px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        form {
+            margin-top: 15px;
+        }
+
+        input,
+        button,
+        select {
+            padding: 5px;
+            margin: 5px 0;
+        }

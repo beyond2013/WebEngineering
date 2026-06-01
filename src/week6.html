@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantic HTML Layout Practice</title>
+    <link rel="stylesheet" href="week6.css" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header>
+            <h1>Website Header</h1>
+            <p>This is the semantic & layout practice page.</p>
+        </header>
+
+        <!-- NAVIGATION -->
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <main>
+
+            <!-- CONTENT AREA -->
+            <div class="content">
+
+                <!-- SECTION -->
+                <section>
+                    <h2>Section 1</h2>
+                    <p>
+                        Sections group related content together.
+                    </p>
+
+                    <!-- ARTICLE -->
+                    <article>
+                        <h3>Article 1</h3>
+                        <p>
+                            Articles represent self-contained content.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3>Article 2</h3>
+                        <p>
+                            Experiment with margins, padding, width,
+                            float, flex, or grid.
+                        </p>
+                    </article>
+                </section>
+
+                <!-- SECTION -->
+                <section>
+                    <h2>Positioning Demo</h2>
+
+                    <div class="box-container">
+
+                        <div class="box">
+                            Box 1
+                            <span class="badge">NEW</span>
+                        </div>
+
+                        <div class="box">
+                            Box 2
+                        </div>
+
+                        <div class="box">
+                            Box 3
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- TABLE -->
+                <section>
+                    <h2>Table Example</h2>
+
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Course</th>
+                        </tr>
+
+                        <tr>
+                            <td>Ali</td>
+                            <td>HTML</td>
+                        </tr>
+
+                        <tr>
+                            <td>Sara</td>
+                            <td>CSS</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <!-- FORM -->
+                <section>
+                    <h2>Form Example</h2>
+
+                    <form>
+
+                        <label>Name:</label><br>
+                        <input type="text" placeholder="Enter name">
+
+                        <br>
+
+                        <label>Department:</label><br>
+                        <select>
+                            <option>Computer Science</option>
+                            <option>IT</option>
+                        </select>
+
+                        <br>
+
+                        <button type="submit">Submit</button>
+
+                    </form>
+                </section>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <aside>
+                <h2>Sidebar / Aside</h2>
+
+                <p>
+                    Aside content is related but not central to the page.
+                </p>
+
+                <figure>
+                    <img src="https://via.placeholder.com/200x120" alt="Placeholder image">
+
+                    <figcaption>
+                        Example Figure + Figcaption
+                    </figcaption>
+                </figure>
+            </aside>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>Website Footer</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
