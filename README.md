@@ -75,7 +75,7 @@
 
 ---
 
-### **Week 8: JavaScript & DOM Manipulation**
+### [Week 8: JavaScript & DOM Manipulation](markdown/lecture8.md)
 
 * DOM structure
 * Selecting and modifying elements
