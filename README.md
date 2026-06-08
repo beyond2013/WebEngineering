@@ -93,7 +93,7 @@
 
 ---
 
-### **Week 10: Client-Side Engineering Concepts**
+### [Week 10: Client-Side Engineering Concepts](markdown/lecture10.md)
 
 * Separation of concerns (HTML, CSS, JS)
 * Code organization
