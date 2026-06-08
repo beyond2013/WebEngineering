@@ -569,7 +569,7 @@ This is the difference between programming and software engineering.
 
 ---
 
-# [Activity: Refactor Messy Code into Structured Format](markdown/lab10.md)
+# [Activity: Refactor Messy Code into Structured Format](lab10.md)
 
 ---
 
