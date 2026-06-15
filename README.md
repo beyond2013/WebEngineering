@@ -103,7 +103,7 @@
 
 ---
 
-### **Week 11: Server-Side Basics**
+### [Week 11: Server-Side Basics](markdown/lecture11.md)
 
 * What is server-side programming?
 * Request handling concept
