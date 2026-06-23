@@ -114,7 +114,7 @@
 
 ---
 
-### **Week 12: Working with Data**
+### [Week 12: Working with Data](markdown/lecture12.md)
 
 * Forms and data submission
 * GET vs POST
